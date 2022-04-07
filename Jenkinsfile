@@ -11,6 +11,14 @@ parameters {
                           steps{
                           checkout([$class: 'GitSCM', branches: [[name: '*/facebook-2.0']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Kaushal1100/facebook.git']]])
                           }
+        stage('Build'){
+                          steps{
+                                 script{
+                                        mvn -f /var/lib/jenkins/workspace/Maven-Pipeline/pom.xml install
+
+                                       }
+                          }
+        }
        }
  }
 
