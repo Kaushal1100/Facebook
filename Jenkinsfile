@@ -1,4 +1,4 @@
-#PIPELINE for facebook project in Jenkins
+
 pipeline{
   agent any
 parameters {
